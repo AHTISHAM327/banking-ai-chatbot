@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+transformers
+accelerate
+pydantic
+python-multipart
+# torch is already in the base image

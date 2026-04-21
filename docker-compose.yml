@@ -1,0 +1,12 @@
+services:
+  chatbot:
+    build: .
+    container_name: banking-chatbot
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount your local models/ folder into the container
+      - ./models:/app/models
+    environment:
+      - MODEL_PATH=/app/models/dialogpt-medium
+    restart: unless-stopped
